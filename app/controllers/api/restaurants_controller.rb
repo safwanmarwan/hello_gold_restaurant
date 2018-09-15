@@ -4,7 +4,7 @@ module Api
     
       # GET /restaurants
       def index
-        @restaurants = restaurant.all
+        @restaurants = Restaurant.all
         json_response(@restaurants)
       end
       
@@ -14,7 +14,7 @@ module Api
     
       # POST /restaurants
       def create
-        @restaurant = restaurant.create!(restaurant_params)
+        @restaurant = Restaurant.create!(restaurant_params)
         json_response(@restaurant)
       end
     
@@ -42,7 +42,7 @@ module Api
       end
     
       def set_restaurant
-        @restaurant = restaurant.find(params[:id])
+        @restaurant = Restaurant.find(params[:id])
       end
     end
 end

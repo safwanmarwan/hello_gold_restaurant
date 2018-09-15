@@ -4,7 +4,7 @@ module Api
     
       # GET /dishs
       def index
-        @dishes = dish.all
+        @dishes = Dish.all
         json_response(@dishs)
       end
       
@@ -14,7 +14,7 @@ module Api
     
       # POST /dishs
       def create
-        @dish = dish.create!(dish_params)
+        @dish = Dish.create!(dish_params)
         json_response(@dish)
       end
     
@@ -42,7 +42,7 @@ module Api
       end
     
       def set_dish
-        @dish = dish.find(params[:id])
+        @dish = Dish.find(params[:id])
       end
     end
 end

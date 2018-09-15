@@ -3,18 +3,16 @@ Rails.application.routes.draw do
   namespace :api do
     resources :restaurants do
       collection do
-        get '/:id/dishes', to: 
+        get '/:id/dishes', to: 'restaurants#dishes_index'
       end
     end
     
-    resources :dishes
+    resources :dishes do
+      collection do
+          get '/:id/dishes', to: 'dishes#restaurants_index'
+      end
+    end
   end
-  
-  resources :users do
-			collection do
-				post 'receive_update', to: 'users#receive_update'
-			end
-		end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
