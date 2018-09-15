@@ -9,7 +9,7 @@ module Api
       end
       
       def restaurants_index
-        @restaurants = @dish
+        @restaurants = @dish.restaurants
       end
     
       # POST /dishs
