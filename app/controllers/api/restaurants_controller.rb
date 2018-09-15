@@ -38,7 +38,7 @@ module Api
       private
     
       def restaurant_params
-        params.permit(:title)
+        params.permit(:title, :dish_id)
       end
     
       def set_restaurant

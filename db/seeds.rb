@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Restaurant.create([
-    {name: 'Restaurant One'},
-    {name: 'Restaurant Two'},
-    {name: 'Restaurant Three'},
-    {name: 'Restaurant Four'},
-    {name: 'Restaurant Five'},
+    {name: 'Restaurant One', dish_id: [1]},
+    {name: 'Restaurant Two', dish_id: [1,2]},
+    {name: 'Restaurant Three', dish_id: [2,3,4]},
+    {name: 'Restaurant Four', dish_id: [5]},
+    {name: 'Restaurant Five', dish_id: [1,4]},
     ])
     
 Dish.create([
